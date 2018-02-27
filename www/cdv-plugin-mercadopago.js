@@ -1,7 +1,7 @@
 /*global cordova, module*/
 
 function MercadoPago() {}
-
+/*
 MercadoPago.prototype.startCardSelection = function(publicKey, site, amount, merchantBaseUrl, merchantGetCustomerUri, merchantAccessToken, color, blackFont, installmentsEnabled, paymentPreference, successCallback, errorCallback) {
   cordova.exec(successCallback, errorCallback, "MercadoPago", "startCardSelection", [publicKey, site, amount, merchantBaseUrl, merchantGetCustomerUri, merchantAccessToken, color, blackFont, installmentsEnabled, paymentPreference]);
 };
@@ -41,6 +41,7 @@ MercadoPago.prototype.showPaymentResult = function(publicKey, payment, paymentMe
 MercadoPago.prototype.startCheckout = function(publicKey, prefid, color, blackFont, successCallback, errorCallback) {
   cordova.exec(successCallback, errorCallback, "MercadoPago", "startCheckout", [publicKey, prefid, color, blackFont]);
 };
+*/
 MercadoPago.prototype.getPaymentMethods = function(publicKey, successCallback, errorCallback) {
   cordova.exec(successCallback, errorCallback, "MercadoPago", "getPaymentMethods", [publicKey]);
 };
@@ -68,7 +69,9 @@ MercadoPago.prototype.getCustomer = function(merchantBaseUrl, merchantGetCustome
 MercadoPago.prototype.createPaymentRecovery = function(payment, token, paymentMethod, payerCost, issuer, successCallback, errorCallback) {
   cordova.exec(successCallback, errorCallback, "MercadoPago", "createPaymentRecovery", [payment, token, paymentMethod, payerCost, issuer]);
 };
+/*
 MercadoPago.prototype.startMercadoPagoConnect = function(appId, merchantBaseUrl, merchantGetCredentialsUri, merchantAccessToken, redirectUri, successCallback, errorCallback) {
   cordova.exec(successCallback, errorCallback, "MercadoPago", "startMercadoPagoConnect", [appId, merchantBaseUrl, merchantGetCredentialsUri, merchantAccessToken, redirectUri]);
 };
+*/
 module.exports = new MercadoPago();
